@@ -15,8 +15,16 @@ The extension has the following features:
 
 In order to use this extension you need:
 
-- a space and Contenful CLI installed
 - the UI Extension has to be 3rd party hosted using the src property
+
+## Instalation (UI - using this repo)
+
+The UI Extension can be installed manually from the Contentful UI following the below steps:
+
+1. Navigate to Settings > Extensions
+2. Click on "Add extension > Install from Github"
+3. Use `https://raw.githubusercontent.com/pauloamgomes/contentful-json-inspector/master/extension.json` in the url
+4. On the extension settings screen change Hosting to Self-hosted using the url `https://pauloamgomes.github.io/contentful-json-inspector/`
 
 ## Usage
 
