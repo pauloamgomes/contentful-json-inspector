@@ -1,0 +1,6 @@
+{
+  "id": "json-inspector",
+  "name": "json-inspector",
+  "srcdoc": "./build/index.html",
+  "sidebar": true
+}
