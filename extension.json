@@ -1,6 +1,6 @@
 {
   "id": "json-inspector",
-  "name": "json-inspector",
+  "name": "Entry JSON Inspector",
   "srcdoc": "./build/index.html",
   "sidebar": true
 }

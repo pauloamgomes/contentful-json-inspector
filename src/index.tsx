@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import { Button, TextLink, Icon, Spinner } from '@contentful/forma-36-react-components';
+import { Button, TextLink, Spinner } from '@contentful/forma-36-react-components';
 import {
   init,
   locations,
@@ -101,6 +101,7 @@ export class DialogExtension extends React.Component<Props, DialogExtensionState
                 value={json}
                 editorProps={{ $blockScrolling: true }}
                 width="100%"
+                height="88vh"
                 debounceChangePeriod={200}
               />
             </div>
@@ -140,8 +141,9 @@ export class SidebarExtension extends React.Component<{
 
   onButtonClick = async () => {
     await this.props.sdk.dialogs.openExtension({
-      width: 960,
-      position: 'top',
+      width: 'fullWidth',
+      allowHeightOverflow: true,
+      position: 'center',
       title: 'Entry JSON Inspector',
       parameters: {
         id: this.props.sdk.ids.entry
@@ -151,11 +153,8 @@ export class SidebarExtension extends React.Component<{
 
   render() {
     return (
-      <TextLink onClick={this.onButtonClick}>
-        <Icon icon="Entry" style={{ marginRight: '4px', verticalAlign: 'middle' }} />
-        <span style={{ display: 'inline-block', verticalAlign: 'middle' }}>
-          Inspect Entry JSON object
-        </span>
+      <TextLink onClick={this.onButtonClick} icon="Entry">
+        Inspect Entry JSON object
       </TextLink>
     );
   }
